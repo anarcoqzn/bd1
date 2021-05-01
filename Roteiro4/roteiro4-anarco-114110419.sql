@@ -20,7 +20,7 @@ SELECT fname, lname FROM EMPLOYEE WHERE sex='M';
 SELECT fname FROM EMPLOYEE WHERE sex='M' AND superssn IS NULL;
 
 -- Q9
-SELECT E.fname, S.fname FROM EMPLOYEE AS E, EMPLOYEE AS S WHERE E.superssn IS NOT NULL AND E.superssn = S.ssn;
+SELECT E.fname, S.fname FROM EMPLOYEE AS E, EMPLOYEE AS S WHEREE.superssn = S.ssn;
 
 -- Q10
 SELECT E.fname FROM EMPLOYEE AS E, EMPLOYEE AS S WHERE E.superssn IS NOT NULL AND E.superssn = S.ssn AND S.fname='Franklin';
@@ -29,7 +29,7 @@ SELECT E.fname FROM EMPLOYEE AS E, EMPLOYEE AS S WHERE E.superssn IS NOT NULL AN
 SELECT D.dname, L.dlocation FROM DEPARTMENT AS D,DEPT_LOCATIONS AS L WHERE D.dnumber=L.dnumber;
 
 -- Q12
-SELECT D.dname FROM DEPARTMENT AS D,DEPT_LOCATIONS AS L WHERE D.dnumber=L.dnumber AND L.dlocation LIKE '%S%';
+SELECT D.dname FROM DEPARTMENT AS D,DEPT_LOCATIONS AS L WHERE D.dnumber=L.dnumber AND L.dlocation LIKE 'S%';
 
 -- Q13
 SELECT fname,lname, dependent_name FROM EMPLOYEE, DEPENDENT WHERE essn=ssn;
